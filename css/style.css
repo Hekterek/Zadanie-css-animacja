@@ -1,0 +1,54 @@
+@keyframes move_square {
+  25% {
+    transform: translate(300px);
+  }
+  50% {
+    transform: translate(300px, 300px);
+  }
+  75% {
+    transform: translateY(300px);
+  }
+}
+
+@keyframes move_circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.div-container,
+.div-container-circle {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(128, 128, 128, 0.15);
+}
+
+.div-move,
+.div-circle {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.div-move {
+  animation: move_square 10s 1s linear infinite;
+}
+
+.div-container-circle,
+.div-circle {
+  border-radius: 50%;
+}
+
+.div-circle {
+  margin: 45px;
+  transform-origin: 155px 155px;
+  animation: move_circle 10s 1s linear infinite;
+}
